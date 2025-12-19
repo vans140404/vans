@@ -64,7 +64,6 @@ void equationSecondDegre(float a, float b, float c, float *x1, float *x2, float 
 // définition d'une foncion qui lit un entier positif et vérifie si celui-ci est premier
 int PremierOuNon(int n) {
     int i;
-<<<<<<< HEAD
     if (n <= 1) return 0; 
     if (n == 2) return 1;  
     if (n % 2 == 0) return 0;  
@@ -73,24 +72,19 @@ int PremierOuNon(int n) {
             return 0;  
         }
     }
-    
     return 1;  
-=======
     
-    /* Cas particuliers */
-    if (n <= 1) return 0;  /* 0 et 1 ne sont pas premiers */
-    if (n == 2) return 1;  /* 2 est premier */
-    if (n % 2 == 0) return 0;  /* les nombres pairs > 2 ne sont pas premiers */
+    if (n <= 1) return 0;  
+    if (n == 2) return 1;  
+    if (n % 2 == 0) return 0;  
     
-    /* Vérifier les diviseurs impairs seulement jusqu'à vn */
     for (i = 3; i * i <= n; i += 2) {
         if (n % i == 0) {
-            return 0;  /* divisible donc pas premier */
+            return 0;  
         }
     }
     
-    return 1;  /* premier */
->>>>>>> 436ddd8f6c14f0697210b0a6074c55f07615b03b
+    return 1;  
 }
 // définition d'une fonction qui calcule et affiche une distance
 int CalculeEtAfficheDistance(float x1, float y1, float x2, float y2) {
